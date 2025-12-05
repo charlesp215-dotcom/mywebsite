@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Charlie Porter - Hobbies </title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="top_links">
+        <a href="Charlie Porter - All About Me.html">
+            <button>
+                Home
+            </button>
+        </a>
+        <a href="Charlie Porter - Family.html">
+            <button>
+                Family
+            </button>
+        </a>
+        </div>
+        <hr>
+        <heading class="Header">
+            <h1> Hobbies </h1>
+            <p> I have a lot of hobbies, here are just a couple! </p>
+        </heading>
+        <hr>
+        <ol>
+            <li>
+                Computers
+            </li>
+            <button type="button" class="collapsible">
+                <img src="computers.jpg" width="250px">
+            </button>
+            <div class="content">
+                <p>
+                    I love building computers and experimenting with different types of hardware!
+                </p>
+            </div>
+            <li>
+                Writing
+            </li>
+            <button type="button" class="collapsible">
+                <img src="writing.jpg" width="250px">
+            </button>
+            <div class="content">
+                <p>
+                    Writing is a favorite past-time of mine, and it helps relieve stress when life gets busy. It also serves as a nice creative outlet!
+                </p>
+            </div>
+        </ol>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
+    });
+}
+</script>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Charlie Porter - Family </title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="top_links">
+        <a href="Charlie Porter - All About Me.html">
+            <button>
+                Home
+            </button>
+        </a>
+        <a href="Charlie Porter - Hobbies.html">
+            <button>
+                Hobbies
+            </button>
+        </a>
+        </div>
+        <hr>
+        <heading class="Header">
+            <h1> Family </h1>
+            <p> I love my family, here's a little bit more about them. </p>
+        </heading>
+        <hr>
+        <ul>
+            <li>
+                My Parents
+            </li>
+            <button type="button" class="collapsible">
+                <img src="parents.jpg" width="250px">
+            </button>
+            <div class="content">
+                <p>
+                    My mom and my dad met in college at BYU Idaho. They had four kids, me and my three siblings. They're old.
+                </p>
+            </div>
+            <li>
+                Siblings
+            </li>
+            <button type="button" class="collapsible">
+                <img src="siblings.jpeg" width="250px">
+            </button>
+            <div class="content">
+                <p>
+                    I have three siblings. Katie, my sister and the youngest of us, Edison, the second youngest and a silly little guy, 
+                    and Jackie, the delinquent and the oldest kid of the family.
+                </p>
+            </div>
+        </ul>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
+    });
+}
+</script>
+    </body>
+</html>
